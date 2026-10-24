@@ -1,1 +1,59 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Générateur d'images IA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Générateur d'images IA</h1>
+    <p class="subtitle">Décris ton image, l'IA la crée.</p>
+
+    <div class="form-group">
+      <label for="prompt">Ton prompt (en anglais de préférence) :</label>
+      <textarea id="prompt" rows="4" placeholder="Ex: a beautiful young woman with long black hair, wearing a red dress, soft studio lighting, photorealistic, 4K"></textarea>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="width">Largeur</label>
+        <select id="width">
+          <option value="512">512</option>
+          <option value="768">768</option>
+          <option value="1024" selected>1024</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="height">Hauteur</label>
+        <select id="height">
+          <option value="512">512</option>
+          <option value="768">768</option>
+          <option value="1024" selected>1024</option>
+          <option value="1536">1536</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>
+        <input type="checkbox" id="enhance" checked>
+        Améliorer automatiquement le prompt
+      </label>
+    </div>
+
+    <button id="generateBtn">✨ Générer l'image</button>
+
+    <div id="status" class="status"></div>
+
+    <div id="result" class="result hidden">
+      <img id="generatedImage" alt="Image générée">
+      <a id="downloadLink" download="image-ia.jpg" class="download-btn">⬇️ Télécharger</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
